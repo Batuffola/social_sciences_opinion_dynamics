@@ -126,6 +126,20 @@ random net,all to all, grid<br>
  oder?<br>
    $𝑥_𝑖(t+1) = 𝑥_𝑖 + 𝛽_𝑖 ∙tanh⁡(\dfrac{𝛽_𝑖}{∑_{𝑗≠𝑖} 𝑤_{𝑖𝑗}}  ∑_{𝑗≠𝑖} 𝑤_{𝑖𝑗}   𝑥_{𝑖𝑗} ∙ (−𝛼_𝑖 (|𝑥_{𝑖𝑗} | − 𝜌_𝑖)))$<br>
 
+   didn't work because the increment from the tanh function is too small.. when it was sumated up over the neighbors it reached a size that made a difference but like this it is not noticable enough <br>
+
+
+   #### different approach: dividing opinions in 3-5 cathegories like (agree [0, 0.3], neutral [0.3, 0.6], disagree [0.6, 1]) 
+   relevant for decision making, voting behaviour.. or measured opinions <br>
+   threshold functions are too big of a chapter in opinion dynamics to be left out <br>
+   with $\beta_i$ being the threshold of percentage in neigbors needed to change opinion
+   \begin{equation}
+  𝑥_𝑖(t+1) =  \left(  s   if \dfrac{1}{∑_{𝑗≠𝑖} 𝑤_{𝑖𝑗}}∑_{𝑗≠𝑖} 𝑤_{𝑖𝑗} ∙  count(𝑥_{𝑗} =s) for s element of ∈ {0,0.5, 1} or {0,2.5,0.5, 7.5,1} \right) \cdot \left( 𝑥_𝑖  other \right)
+ \end{equation}
+
+   $𝑥_𝑖(t+1) =  s   if \dfrac{1}{∑_{𝑗≠𝑖} 𝑤_{𝑖𝑗}}∑_{𝑗≠𝑖} 𝑤_{𝑖𝑗} ∙  count(𝑥_{𝑗} =s)> \beta_i $ for s element of ∈ {0,0.5, 1} or {0,2.5,0.5, 7.5,1} <br>
+               $𝑥_𝑖$ other <br>
+
  ### Questions:-- answered and implemented
   + how many nodes in a network: 200 because results are super stable trueout different network sizes <br>
   + stochastic block model creates issues: not compatible with leaving the avg degree the same as in other networktypes: too sparse..<br>
@@ -137,6 +151,9 @@ random net,all to all, grid<br>
   - how many combinations should i allow:<br>
                                          does complex and rewiring even make sense? or complex repulsion?  yes,but not a priority <br>
                                          (according to me only makes sense again in pairwise interactions) <br>
+
+ ### Testing assumptions against each other:
+  + 
 
   ### code needs clean up baaaaadly --- missing
 
