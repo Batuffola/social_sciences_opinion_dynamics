@@ -1,4 +1,4 @@
-# Flexible opinion dynamics framework
+# Flexible opinion dynamics model 
 Opinion dynamics are still often modeled using single contagion frameworks such as
 SIR models. However, it is well established that the relationship between exposure
 to a number of people holding a particular opinion and subsequent changes in an
@@ -23,9 +23,9 @@ knit groups (echo chambers) and highly connected individuals (hubs) in the sprea
 of opinions.<br>
 
 This review aims to compare these diverse modeling approaches and integrate empirical data to enhance the understanding and predictive power of opinion dynamics models. Additionally, I intend to test out the assumptions underlying these models and explore their paradoxes, providing a critical examination of their applicability and limitations in capturing the intricacies of complex contagion in opinion dynamics.
-By merging theoretical models with empirical observations, we seek to develop a more comprehensive framework for understanding and predicting opinion spread.<br>
+By merging theoretical models with empirical observations, we seek to develop a more comprehensive comparable model for understanding and predicting opinion spread.<br>
 
-I developed a flexible agent-based model in Python, enabling the simulation of user interactions on social graphs under varied assumptions drawn from existing opinion dynamics frameworks. The model made it possible to compare key social mechanisms—such as social influence, attraction/repulsion to differing opinions, and thresholds for contagion—within a unified framework. I tested these models on different network types involving large-scale and adaptive network structures, and visualized opinion clustering to quantitatively assess polarization. 
+I developed a flexible agent-based model in Python, enabling the simulation of user interactions on social graphs under varied assumptions drawn from existing opinion dynamics frameworks. The model made it possible to compare key social mechanisms—such as social influence, attraction/repulsion to differing opinions, and thresholds for contagion—within a unified frame. I tested these models on different network types involving large-scale and adaptive network structures, and visualized opinion clustering to quantitatively assess polarization. 
 
 
 ## Task diary: 
